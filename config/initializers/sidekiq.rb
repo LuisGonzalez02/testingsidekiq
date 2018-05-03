@@ -8,3 +8,4 @@ Sidekiq.configure_server do |config|
   config.redis = { :size => 2 }
 end
 
+:concurrency:  3
