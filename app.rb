@@ -42,7 +42,7 @@ class App < Sinatra::Base
 
 	get '/add_job' do
 		"
-		<p>Added Job: #{TestWorker.perform_async(20)}</p>
+		<p>Added Job: #{::TestWorker.perform_async(20)}</p>
 		<p><a href='/'>Back</a></p>
 		"
 	end
