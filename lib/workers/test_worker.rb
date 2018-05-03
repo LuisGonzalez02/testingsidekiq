@@ -1,7 +1,6 @@
 require 'sidekiq'
 
 
-
 class TestWorker
 	include Sidekiq::Worker
 	def perform(sleep_time)
