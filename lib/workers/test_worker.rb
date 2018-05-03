@@ -1,3 +1,13 @@
+require 'sidekiq'
+
+ Sidekiq.configure_server do |config|
+   config.redis = { url: 'redis://redistogo:5f0e7f79454636e48bfcbd8358782e92@albacore.redistogo.com:11441/' }
+ end
+
+ Sidekiq.configure_client do |config|
+   config.redis = { url: 'redis://redistogo:5f0e7f79454636e48bfcbd8358782e92@albacore.redistogo.com:11441/' }
+ end
+
 class TestWorker
 	include Sidekiq::Worker
 	def perform(sleep_time)
