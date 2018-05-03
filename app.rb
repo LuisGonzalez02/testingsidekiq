@@ -3,9 +3,7 @@ require 'sidekiq'
 require 'sidekiq/api'
 require 'sidekiq/web'
 
-require'./lib/workers/test_worker.rb'
-
-
+require_relative 'lib/workers/test_worker.rb'
 
 class App < Sinatra::Base
 	get '/' do
@@ -24,7 +22,7 @@ class App < Sinatra::Base
 
 	get '/add_job' do
 		"
-		<p>Added Job: #{TestWorker.perform_async(20)}</p>
+		<p>Added Job: #{::TestWorker.perform_async(20)}</p>
 		<p><a href='/'>Back</a></p>
 		"
 	end

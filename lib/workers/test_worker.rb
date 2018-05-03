@@ -1,4 +1,5 @@
 require 'sidekiq'
+require 'twilio-ruby'
 
 
 class TestWorker
