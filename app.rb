@@ -3,7 +3,7 @@ require 'sidekiq'
 require 'sidekiq/api'
 require 'sidekiq/web'
 
-require_relative 'lib/test_worker.rb'
+require_relative 'lib/workers/test_worker.rb'
 
 class App < Sinatra::Base
 	get '/' do
