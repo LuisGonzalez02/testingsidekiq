@@ -1,1 +1,1 @@
-worker: bundle exec sidekiq -e production -r /config/initializers/sidekiq.rb
+worker: bundle exec sidekiq -e production -r ./config/initializers/sidekiq.rb
